@@ -58,8 +58,8 @@ def predict(data_path, background_data_path, output):
         predictions.shape[1] == 2
     ), "Predictions must have two columns: nomem_encr and prediction"
     # Check for the columns, order does not matter
-    assert set(predictions.columns) == set(
-        ["nomem_encr", "prediction"]
+    assert (
+        set(predictions.columns) == {"nomem_encr", "prediction"}
     ), "Predictions must have two columns: nomem_encr and prediction"
 
     predictions.to_csv(output, index=False)

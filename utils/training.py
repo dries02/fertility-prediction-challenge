@@ -8,6 +8,13 @@ It is important to document your training steps here, including seed,
 number of folds, model, et cetera
 """
 
+import random
+
+import joblib
+from sklearn.linear_model import LogisticRegression
+import pandas as pd
+
+
 def train_save_model(cleaned_df, outcome_df):
     """
     Trains a model using the cleaned dataframe and saves the model to a file.
