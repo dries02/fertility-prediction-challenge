@@ -1,5 +1,6 @@
 .ipynb_checkpoints
 /data/personal
+/.idea
 # macOS
 .DS_Store
 .AppleDouble
