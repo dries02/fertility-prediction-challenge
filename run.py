@@ -70,5 +70,4 @@ if __name__ == "__main__":
     'data/PreFer_fake_background_data.csv'
     'data/PreFer_fake_data.csv'
     'data/PreFer_fake_outcome.csv'
-    # python run.py data/PreFer_fake_background_data.csv data/PreFer_fake_data.csv data/PreFer_fake_outcome.csv
     predict(args.data_path, args.background_data_path, args.output)
