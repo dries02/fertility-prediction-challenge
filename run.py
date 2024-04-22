@@ -8,7 +8,7 @@ python run.py
 
 For example:
 
-python run.py PreFer_fake_data.csv PreFer_fake_background_data.csv
+python run.py data/PreFer_fake_data.csv data/PreFer_fake_background_data.csv
 
 Optionally, you can use the score function to calculate evaluation scores given 
 your predictions and the ground truth within the training dataset.
@@ -18,7 +18,7 @@ your predictions and the ground truth within the training dataset.
 import sys
 import argparse
 import pandas as pd
-import submission
+import utils.submission as submission
 
 parser = argparse.ArgumentParser(description="Process data.")
 
@@ -34,7 +34,7 @@ args = parser.parse_args()
 def predict(data_path, background_data_path, output):
     """Predict Score (evaluate) the predictions and write the metrics.
 
-    This function takes the path to an data CSV file containing the data data.
+    This function takes the path to CSV file containing the data.
     It calls submission.py clean_df and predict_outcomes writes the predictions
     to a new output CSV file.
 
@@ -67,4 +67,8 @@ def predict(data_path, background_data_path, output):
 
 if __name__ == "__main__":
     args = parser.parse_args()
+    'data/PreFer_fake_background_data.csv'
+    'data/PreFer_fake_data.csv'
+    'data/PreFer_fake_outcome.csv'
+    # python run.py data/PreFer_fake_background_data.csv data/PreFer_fake_data.csv data/PreFer_fake_outcome.csv
     predict(args.data_path, args.background_data_path, args.output)
