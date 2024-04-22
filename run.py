@@ -18,7 +18,7 @@ your predictions and the ground truth within the training dataset.
 import sys
 import argparse
 import pandas as pd
-import utils.submission as submission
+import submission
 
 parser = argparse.ArgumentParser(description="Process data.")
 
