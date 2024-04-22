@@ -35,9 +35,5 @@ def train_save_model(cleaned_df, outcome_df):
     
     # Logistic regression model
     model = LogisticRegression()
-
-    # Fit the model
     model.fit(model_df[['age']], model_df['new_child'])
-
-    # Save the model
     joblib.dump(model, "model.joblib")
